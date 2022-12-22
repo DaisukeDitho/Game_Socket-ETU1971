@@ -10,14 +10,14 @@
 
 # Fonctionnement :
 * Chaque Joueur a 3 Threads : 
-1- pour la généralité du jeu
-2- pour la réception des messages venant du serveur
-3- pour l'envoi des messages au serveur
+1. pour la généralité du jeu
+2. pour la réception des messages venant du serveur
+3. pour l'envoi des messages au serveur
 * À chaque fois qu'un joueur fait un déplacement, il envoie des informations au serveur sous formes de String qui est traité par le serveur après ...
 * Chaque fois que le serveur obtient un message venant des Joueurs ou Client , il fait un traitement ou interprétation sur le message reçu et distribue une information aux autres joueurs par rapport au résultat du traitement ...
 * Le Thread de réception (côté joueur) Attends le message venant du serveur pour synchroniser ou mettre à jour son plateforme de jeu à chaque changement .
 * Chaque message envoyé par les joueurs est accompagné par son ID pour qu'il n'y a pas de confusion lors du synchronisation au niveau du moteur de jeu côté Joueur ...
 * Le serveur a 3 moyens d'envoyer d'information au joueur : 
-1- SendToAll : envoie le message à tout les joueurs connectés 
-2- SendToAllExpectingMe : envoi le message à tout les joueurs sauf à l'envoyeur
-3- SendOnly : envoi le message qu'à un seul joueur précis ...
+1. SendToAll : envoie le message à tout les joueurs connectés 
+2. SendToAllExpectingMe : envoi le message à tout les joueurs sauf à l'envoyeur
+3. SendOnly : envoi le message qu'à un seul joueur précis ...
